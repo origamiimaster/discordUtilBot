@@ -24,6 +24,8 @@ exports.subCommands["list"] = async (client, message, args) => {
 exports.getClassChannels = (client,message) =>{
     if(!message.guild.available) return;
     let categories = message.guild.channels.cache.filter(channel => channel.name.startsWith("Class Chats") && channel.type == "category")
-    message.channel.send(categories.array()[0].toString())
-
+    // message.channel.send("" + categories.array()[0].toString())
+    categories.array().forEach(element => {
+        
+    });
 }
